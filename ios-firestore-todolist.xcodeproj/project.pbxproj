@@ -15,6 +15,7 @@
 		894F5E932A34CA1100C3B5E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 894F5E922A34CA1100C3B5E4 /* GoogleService-Info.plist */; };
 		894F5E982A34F6EA00C3B5E4 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F5E972A34F6EA00C3B5E4 /* TaskDetailView.swift */; };
 		894F5E9A2A35018100C3B5E4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F5E992A35018100C3B5E4 /* Task.swift */; };
+		894F5E9C2A3608BC00C3B5E4 /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F5E9B2A3608BC00C3B5E4 /* FirebaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		894F5E922A34CA1100C3B5E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		894F5E972A34F6EA00C3B5E4 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		894F5E992A35018100C3B5E4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		894F5E9B2A3608BC00C3B5E4 /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
 		BE4D98A3C8F3C26808162CEC /* Pods_ios_firestore_todolist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_firestore_todolist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF28199C27DD6E28F07DF6C7 /* Pods-ios-firestore-todolist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-firestore-todolist.release.xcconfig"; path = "Target Support Files/Pods-ios-firestore-todolist/Pods-ios-firestore-todolist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				894F5E992A35018100C3B5E4 /* Task.swift */,
+				894F5E9B2A3608BC00C3B5E4 /* FirebaseViewModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				894F5E872A34C98600C3B5E4 /* ContentView.swift in Sources */,
 				894F5E9A2A35018100C3B5E4 /* Task.swift in Sources */,
 				894F5E852A34C98600C3B5E4 /* ios_firestore_todolistApp.swift in Sources */,
+				894F5E9C2A3608BC00C3B5E4 /* FirebaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

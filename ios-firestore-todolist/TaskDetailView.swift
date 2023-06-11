@@ -6,45 +6,40 @@
 //
 
 import SwiftUI
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseFirestoreSwift
 
 struct TaskDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
-    private var db: Firestore
+    @ObservedObject private var firebaseViewModel: FirebaseViewModel
     private let task: Task
-    @State private var title: String = ""
     
     init(_ task: Task) {
         self.task = task
-        db = Firestore.firestore()
+        firebaseViewModel = FirebaseViewModel()
     }
     
     var body: some View {
         VStack {
-            TextField(task.title, text: $title)
+            TextField(task.title, text: $firebaseViewModel.title)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             Button("Update") {
-                updateTask()
+                if let id = task.id {
+                    firebaseViewModel.updateTask(id)
+                    presentationMode.wrappedValue.dismiss()
+                } else {
+                    firebaseViewModel.showAlert = true
+                }
             }
+            .alert(isPresented: $firebaseViewModel.showAlert, content: {
+                Alert(title: Text("Error"), message: Text("Something went wrong :/"))
+            })
             .padding(16)
             Spacer()
-            
         }
         .navigationTitle("Edit")
         .ignoresSafeArea()
         .padding()
-    }
-    
-    private func updateTask() {
-        db.collection("tasks").document(task.id ?? "").updateData([
-            "title": title
-        ])
-        
-        presentationMode.wrappedValue.dismiss()
     }
 }
 
